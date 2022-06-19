@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Game Captcha Demo</title>
+    <title>召唤神龙游戏验证码 DEMO</title>
     <style>
         * {
             margin: 0;
@@ -46,7 +46,7 @@
 </head>
 
 <body>
-    <p id="link"><a href="#" onclick="showGame()">Finish captcha challenge to continue</a></p>
+    <p id="link"><a href="#" onclick="showGame()"> 点击打开游戏并且合成锦鲤有惊喜 👇🏻</a></p>
     <p id="result"></p>
     <div id="bonus">
         <img src="https://w.wallhaven.cc/full/28/wallhaven-28q366.jpg" alt="">
@@ -60,6 +60,7 @@
             console.log('1')
             window.addEventListener('message', (e) => {
                 if (e.data === 'OK') {
+                    document.querySelector('#link').style.display = 'none'
                     document.querySelector('#result').innerHTML = 'OK'
                     document.querySelector('#bonus').style.display = 'block'
                 }
