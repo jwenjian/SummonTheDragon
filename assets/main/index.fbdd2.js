@@ -676,6 +676,9 @@ window.__require = function e(t, a, i) {
             },
             start: function() {},
             play: function() {
+                if (window.opener) {
+                    window.opener.postMessage('play started')
+                }
                 console.log(1);
                 var e = this;
                 e.enableButtons();
@@ -1135,7 +1138,7 @@ window.__require = function e(t, a, i) {
                             window.opener.postMessage('OKKKKKKKKK')
                             console.log('OKKKKK')
                             // 关闭窗口
-                            window.close()
+                            //window.close()
                         }
                     }
                     this.removeSmallFish222(),
