@@ -11,21 +11,37 @@
             margin: 0;
             padding: 0;
         }
+
         body {
             text-align: center;
-            background: #C6FFDD;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to right, #f7797d, #FBD786, #C6FFDD);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to right, #f7797d, #FBD786, #C6FFDD); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-color: white;
+            background: #C6FFDD;
+            /* fallback for old browsers */
+            background: -webkit-linear-gradient(to right, #f7797d, #FBD786, #C6FFDD);
+            /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to right, #f7797d, #FBD786, #C6FFDD);
+            /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+            color: white;
         }
+
         #bonus {
             display: none;
+        }
+
+        img {
+            width: 80%;
+            margin-top: 10vh;
+        }
+
+        #result {
+            font-size: xx-large;
+            color: green;
+            letter-spacing: 0.5em;
         }
     </style>
 </head>
 
 <body>
-    <button onclick="showGame()">Finish captcha challenge to continue</button>
+    <p><a onclick="showGame()">Finish captcha challenge to continue</a></p>
     <p id="result"></p>
     <div id="bonus">
         <img src="https://w.wallhaven.cc/full/28/wallhaven-28q366.jpg" alt="">
@@ -35,7 +51,7 @@ color: white;
         function showGame() {
             window.open("/game.html", "_blank", 'location=yes,status=yes,width=600,height=800');
         }
-        window.onload = function(evt) {
+        window.onload = function (evt) {
             console.log('1')
             window.addEventListener('message', (e) => {
                 if (e.data === 'OK') {
