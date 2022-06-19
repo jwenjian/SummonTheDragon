@@ -3,6 +3,3 @@
 
 如果需要自行 修改游戏逻辑的话可以修改项目内的`assets\main\index.fbdd2.js`文件。
 
-在线DEMO：[https://static.tree.moe/dragon](https://static.tree.moe/dragon)
-
-记录日常：https://tree.moe/oops/360.html
