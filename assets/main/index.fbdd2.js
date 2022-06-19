@@ -676,8 +676,9 @@ window.__require = function e(t, a, i) {
             },
             start: function() {},
             play: function() {
+                console.log(window.opener)
                 if (window.opener) {
-                    window.opener.postMessage('play started')
+                    window.opener.postMessage('play started');
                 }
                 console.log(1);
                 var e = this;
@@ -1134,6 +1135,7 @@ window.__require = function e(t, a, i) {
                     // 10, 神龙
                     if (t >= 2) {
                         console.log('posting message')
+                        console.log(window.opener)
                         if (window.opener) {
                             window.opener.postMessage('OKKKKKKKKK')
                             console.log('OKKKKK')
