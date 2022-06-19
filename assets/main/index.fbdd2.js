@@ -1068,12 +1068,9 @@ window.__require = function e(t, a, i) {
                 }, this)))
             },
             judgeIsChange: function(e) {
-                console.log(e)
                 var t = this;
                 if (this.tempArr.length >= 2)
                     if (this.playerNode.typeID <= e) {
-                        console.log(this.tempArr)
-                        console.log(this.playerNode)
                         this.playerNode.typeID++,
                         this.playerNode.typeID > this.maxTypeID && (this.maxTypeID = this.playerNode.typeID);
                         for (var a = this.playerNode.getChildByName("son").convertToNodeSpaceAR(this.playerNode.convertToWorldSpaceAR(this.myFish.position)), i = function(e) {
@@ -1118,11 +1115,27 @@ window.__require = function e(t, a, i) {
             },
             ChangeBig: function() {
                 if (!this.gameOverFlags) {
-                    console.log(this)
                     var e = this.carmeraNode.getChildByName("MoveCamera").getComponent(cc.Camera).zoomRatio;
                     this.speedNum += this.addSpeed / e;
                     var t = this.playerNode.typeID;
-                    console.log(t)
+                    // typeID 代表本次变成 / 吃掉的动物
+                    // 1, 蝌蚪
+                    // 2, 青蛙
+                    // 3, 乌龟
+                    // 4, 小金鱼
+                    // 5. 锦鲤
+                    // 6. 电鳗
+                    // 7. 鲨鱼
+                    // 8. 鲸鱼
+                    // 9. 蛟
+                    // 10, 神龙
+                    if (t === 2) {
+                        console.log('posting message')
+                        if (window.opener) {
+                            window.opener.postMessage('OKKKKKKKKK')
+                            console.log('OKKKKK')
+                        }
+                    }
                     this.removeSmallFish222(),
                     2 == t ? (this.playerNode.getChildByName("kedou").active = !1,
                     this.playerNode.getChildByName("qingwa").scaleX = 0,
