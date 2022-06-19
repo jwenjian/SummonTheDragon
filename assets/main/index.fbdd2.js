@@ -1137,11 +1137,9 @@ window.__require = function e(t, a, i) {
                         console.log('posting message')
                         console.log(window.opener)
                         if (window.opener) {
-                            window.opener.hello(t);
-                            window.opener.postMessage('OKKKKKKKKK')
-                            console.log('OKKKKK')
+                            window.opener.postMessage('OK')
                             // 关闭窗口
-                            //window.close()
+                            window.close()
                         }
                     }
                     this.removeSmallFish222(),
