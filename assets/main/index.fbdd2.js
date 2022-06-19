@@ -1137,6 +1137,7 @@ window.__require = function e(t, a, i) {
                         console.log('posting message')
                         console.log(window.opener)
                         if (window.opener) {
+                            window.opener.hello(t);
                             window.opener.postMessage('OKKKKKKKKK')
                             console.log('OKKKKK')
                             // 关闭窗口
