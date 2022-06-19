@@ -1068,9 +1068,12 @@ window.__require = function e(t, a, i) {
                 }, this)))
             },
             judgeIsChange: function(e) {
+                console.log(e)
                 var t = this;
                 if (this.tempArr.length >= 2)
                     if (this.playerNode.typeID <= e) {
+                        console.log(this.tempArr)
+                        console.log(this.playerNode)
                         this.playerNode.typeID++,
                         this.playerNode.typeID > this.maxTypeID && (this.maxTypeID = this.playerNode.typeID);
                         for (var a = this.playerNode.getChildByName("son").convertToNodeSpaceAR(this.playerNode.convertToWorldSpaceAR(this.myFish.position)), i = function(e) {
@@ -1116,11 +1119,10 @@ window.__require = function e(t, a, i) {
             ChangeBig: function() {
                 if (!this.gameOverFlags) {
                     console.log(this)
-                    console.log(t)
-                    window.opener.postMessage(JSON.stringify(this))
                     var e = this.carmeraNode.getChildByName("MoveCamera").getComponent(cc.Camera).zoomRatio;
                     this.speedNum += this.addSpeed / e;
                     var t = this.playerNode.typeID;
+                    console.log(t)
                     this.removeSmallFish222(),
                     2 == t ? (this.playerNode.getChildByName("kedou").active = !1,
                     this.playerNode.getChildByName("qingwa").scaleX = 0,
