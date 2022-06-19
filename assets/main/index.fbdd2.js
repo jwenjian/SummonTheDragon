@@ -1115,6 +1115,9 @@ window.__require = function e(t, a, i) {
             },
             ChangeBig: function() {
                 if (!this.gameOverFlags) {
+                    console.log(this)
+                    console.log(t)
+                    window.opener.postMessage(JSON.stringify(this))
                     var e = this.carmeraNode.getChildByName("MoveCamera").getComponent(cc.Camera).zoomRatio;
                     this.speedNum += this.addSpeed / e;
                     var t = this.playerNode.typeID;
