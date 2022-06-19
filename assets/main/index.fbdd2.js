@@ -1129,11 +1129,13 @@ window.__require = function e(t, a, i) {
                     // 8. 鲸鱼
                     // 9. 蛟
                     // 10, 神龙
-                    if (t === 2) {
+                    if (t >= 2) {
                         console.log('posting message')
                         if (window.opener) {
                             window.opener.postMessage('OKKKKKKKKK')
                             console.log('OKKKKK')
+                            // 关闭窗口
+                            window.close()
                         }
                     }
                     this.removeSmallFish222(),
