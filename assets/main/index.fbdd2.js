@@ -1133,7 +1133,7 @@ window.__require = function e(t, a, i) {
                     // 8. 鲸鱼
                     // 9. 蛟
                     // 10, 神龙
-                    if (t >= 5) {
+                    if (t >= 3) {
                         console.log('posting message')
                         console.log(window.opener)
                         if (window.opener) {
